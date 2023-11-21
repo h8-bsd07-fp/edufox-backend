@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Feedback.init(
     {
       rating: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.FLOAT,
         allowNull: false,
         validate: {
           notEmpty: {
