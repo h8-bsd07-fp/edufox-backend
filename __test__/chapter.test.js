@@ -84,7 +84,7 @@ describe("GET /chapter/:chapterId", () => {
     let chapterId = 1;
     const res = await request(app)
       .get("/chapter/" + chapterId)
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     expect(res.status).toBe(200);
     expect(res.body).toBeInstanceOf(Object);
     // console.log(res.body, "<<<<<");
@@ -110,7 +110,7 @@ describe("GET /chapter/:chapterId", () => {
     let chapterId = 500;
     const res = await request(app)
       .get("/chapter/" + chapterId)
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     expect(res.status).toBe(404);
     expect(res.body).toBeInstanceOf(Object);
     // console.log(res.body, "<<<<<");

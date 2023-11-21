@@ -36,7 +36,7 @@ describe("POST /transaction", () => {
     expect(resLogin.status).toBe(200);
     const res = await request(app)
       .post("/transaction")
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     expect(res.status).toBe(201);
     expect(res.body).toBeInstanceOf(Object);
     // console.log(res.body, "<<<<<");
@@ -68,7 +68,7 @@ describe("PATCH /transaction", () => {
     expect(resLogin.status).toBe(200);
     const res = await request(app)
       .patch("/transaction")
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     expect(res.status).toBe(201);
     expect(res.body).toBeInstanceOf(Object);
     // console.log(res.body, "<<<<<");

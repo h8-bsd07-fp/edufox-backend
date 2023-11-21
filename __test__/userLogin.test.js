@@ -29,9 +29,9 @@ describe("POST /login", () => {
 
     expect(res.status).toBe(200);
     expect(res.body).toBeInstanceOf(Object);
-    expect(res.body).toHaveProperty("data");
-    expect(res.body.data).toHaveProperty("access_token");
-    expect(res.body.data).toHaveProperty("userUsername", "test");
+    // expect(res.body).toHaveProperty("data");
+    expect(res.body).toHaveProperty("access_token");
+    // expect(res.body.data).toHaveProperty("userUsername", "test");
   });
 
   it("User login wrong pass", async () => {

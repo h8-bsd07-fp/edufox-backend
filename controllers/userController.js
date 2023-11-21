@@ -50,6 +50,24 @@ class UserController {
       next(error);
     }
   }
+
+  static async getUserDetail(req, res, next) {
+    const { userId } = req.user;
+    try {
+      const result = await User.findByPk(userId);
+
+      if (!result) {
+        throw new Error("USER_NOT_FOUND");
+      }
+
+      res.status(201).json({
+        statusCode: 201,
+        data: result,
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = UserController;

@@ -90,7 +90,7 @@ describe("GET /enrollments", () => {
     expect(resLogin.status).toBe(200);
     const res = await request(app)
       .get("/enrollments")
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     expect(res.status).toBe(200);
     expect(res.body).toBeInstanceOf(Object);
     // console.log(res.body, "<<<<<");
@@ -116,7 +116,7 @@ describe("POST /enrollments/:courseId", () => {
     const res = await request(app)
       .post("/enrollments/" + courseId)
       .send(enrollmentInput)
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     // console.log(res.body, "<<<<", 109);
     expect(res.status).toBe(201);
     expect(res.body).toBeInstanceOf(Object);
@@ -141,7 +141,7 @@ describe("POST /enrollments/:courseId", () => {
     const res = await request(app)
       .post("/enrollments/" + courseId)
       .send(enrollmentInput)
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     // console.log(res.body, "<<<<", 109);
     expect(res.status).toBe(403);
     expect(res.body).toBeInstanceOf(Object);
@@ -166,7 +166,7 @@ describe("POST /enrollments/:courseId", () => {
     const res = await request(app)
       .post("/enrollments/" + courseId)
       .send(enrollmentInput)
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     // console.log(res.body, "<<<<", 109);
     expect(res.status).toBe(403);
     expect(res.body).toBeInstanceOf(Object);
@@ -187,7 +187,7 @@ describe("GET /enrollments/:courseId", () => {
     let courseId = 1;
     const res = await request(app)
       .get("/enrollments/" + courseId)
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     // console.log(res.body, "<<<<", 109);
     expect(res.status).toBe(200);
     expect(res.body).toBeInstanceOf(Object);
@@ -206,7 +206,7 @@ describe("GET /enrollments/:courseId", () => {
     let courseId = 500;
     const res = await request(app)
       .get("/enrollments/" + courseId)
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     // console.log(res.body, "<<<<", 109);
     expect(res.status).toBe(404);
     expect(res.body).toBeInstanceOf(Object);
@@ -233,7 +233,7 @@ describe("PATCH /enrollments/:courseId", () => {
     const res = await request(app)
       .patch("/enrollments/" + courseId)
       .send(enrollmentInput)
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     // console.log(res.body, "<<<<", 109);
     expect(res.status).toBe(201);
     expect(res.body).toBeInstanceOf(Object);
@@ -258,7 +258,7 @@ describe("PATCH /enrollments/:courseId", () => {
     const res = await request(app)
       .patch("/enrollments/" + courseId)
       .send(enrollmentInput)
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     // console.log(res.body, "<<<<", 109);
     expect(res.status).toBe(404);
     expect(res.body).toBeInstanceOf(Object);
