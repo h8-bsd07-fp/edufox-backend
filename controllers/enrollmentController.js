@@ -1,11 +1,11 @@
 const { Op } = require("sequelize");
-const { Enrollment, Course, Chapter, User } = require("../models/index");
+const { Enrollment, Course, Chapter, User, Category } = require("../models/index");
 const enrollment = require("../models/enrollment");
 
 class EnrollmentController {
   static async getAllEnrollment(req, res, next) {
     const { userId } = req.user;
-    const { page, name } = req.query;
+    const { page } = req.query;
     // let findName = "";
 
     const limitPage = 4;
@@ -22,14 +22,16 @@ class EnrollmentController {
       const result = await Enrollment.findAndCountAll({
         where: {
           UserId: userId,
-          name: {
-            [Op.iLike]: `%${name ? name : ""}%`,
-          },
-          include: Course
         },
         limit: limitPage,
         offset: pageStartPoint,
-        include: Course,
+        include: [{
+          model: Course,
+          include: [
+            Category,
+            Chapter
+          ]
+        }, Chapter],
         order: [["createdAt", "DESC"]], // createdAt DESC
       });
       //   const result = await Enrollment.findAll();
