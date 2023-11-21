@@ -90,7 +90,7 @@ describe("POST /feedback/:courseId", () => {
     const res = await request(app)
       .post("/feedback/" + courseId)
       .send(feedbackInput)
-      .set("access_token", resLogin.body.data.access_token);
+      .set("access_token", resLogin.body.access_token);
     // console.log(res.body, "<<<<", 90);
     expect(res.status).toBe(200);
     expect(res.body).toBeInstanceOf(Object);

@@ -5,7 +5,7 @@ class ChapterController {
     const { chapterId } = req.params;
     try {
       const result = await Chapter.findByPk(chapterId, {
-        include: Course
+        include: Course,
       });
 
       if (!result) {

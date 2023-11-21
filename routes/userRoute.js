@@ -21,4 +21,6 @@ router.patch(
   UserController.changePictProfile
 );
 
+router.get("/", authentication, UserController.getUserDetail);
+
 module.exports = router;
