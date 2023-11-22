@@ -8,11 +8,19 @@ beforeAll(async () => {
   try {
     const userData = require("../data/user.json").map((user) => {
       return {
-        // ...user,
-        email: user.email,
+        ...user,
+        //   username: user.username,
+        email: "chapter_" + user.email,
         password: hashPassword(user.password),
+        //   isPremium: user.isPremium,
+        //   profilePicture: user.profilePicture,
         createdAt: new Date(),
         updatedAt: new Date(),
+        // // ...user,
+        // email: user.email,
+        // password: hashPassword(user.password),
+        // createdAt: new Date(),
+        // updatedAt: new Date(),
       };
     });
     await queryInterface.bulkInsert("Users", userData);
@@ -76,7 +84,7 @@ describe("GET /chapter/:chapterId", () => {
   it("get chapter details success", async () => {
     //login first
     const loginInput = {
-      email: "juan@gmail.com",
+      email: "chapter_juan@gmail.com",
       password: "12345",
     };
     console.log(loginInput, "<<<<");
@@ -104,10 +112,12 @@ describe("GET /chapter/:chapterId", () => {
   it("No chapter found", async () => {
     //login first
     const loginInput = {
-      email: "juan@gmail.com",
+      email: "chapter_juan@gmail.com",
       password: "12345",
     };
+    // console.log(loginInput, "<<<<<<<<<<<<<<<<<<<<<<<");
     const resLogin = await request(app).post("/login").send(loginInput);
+    // console.log(resLogin.body, "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
     expect(resLogin.status).toBe(200);
     let chapterId = 500;
     const res = await request(app)

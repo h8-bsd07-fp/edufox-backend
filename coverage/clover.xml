@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1700621750657" clover="3.2.0">
-  <project timestamp="1700621750657" name="All files">
-    <metrics statements="371" coveredstatements="334" conditionals="70" coveredconditionals="56" methods="40" coveredmethods="35" elements="481" coveredelements="425" complexity="0" loc="371" ncloc="371" packages="6" files="30" classes="30"/>
+<coverage generated="1700622712427" clover="3.2.0">
+  <project timestamp="1700622712427" name="All files">
+    <metrics statements="371" coveredstatements="341" conditionals="70" coveredconditionals="58" methods="40" coveredmethods="36" elements="481" coveredelements="435" complexity="0" loc="371" ncloc="371" packages="6" files="30" classes="30"/>
     <package name="edufox-backend">
       <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="3" methods="0" coveredmethods="0"/>
       <file name="app.js" path="E:\Hacktiv8\Phase 3\Final Project\FP-Backend-Branch\edufox-backend\app.js">
@@ -23,7 +23,7 @@
       </file>
     </package>
     <package name="edufox-backend.controllers">
-      <metrics statements="182" coveredstatements="148" conditionals="38" coveredconditionals="28" methods="16" coveredmethods="13"/>
+      <metrics statements="182" coveredstatements="155" conditionals="38" coveredconditionals="30" methods="16" coveredmethods="14"/>
       <file name="categoryController.js" path="E:\Hacktiv8\Phase 3\Final Project\FP-Backend-Branch\edufox-backend\controllers\categoryController.js">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="8" type="stmt"/>
@@ -34,15 +34,15 @@
         <line num="36" count="8" type="stmt"/>
       </file>
       <file name="chapterController.js" path="E:\Hacktiv8\Phase 3\Final Project\FP-Backend-Branch\edufox-backend\controllers\chapterController.js">
-        <metrics statements="9" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="8" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
         <line num="25" count="8" type="stmt"/>
       </file>
       <file name="courseController.js" path="E:\Hacktiv8\Phase 3\Final Project\FP-Backend-Branch\edufox-backend\controllers\courseController.js">
@@ -157,14 +157,14 @@
         <line num="11" count="18" type="stmt"/>
         <line num="12" count="18" type="stmt"/>
         <line num="16" count="18" type="cond" truecount="2" falsecount="0"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="20" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="17" type="cond" truecount="2" falsecount="0"/>
         <line num="21" count="1" type="stmt"/>
-        <line num="24" count="14" type="stmt"/>
-        <line num="33" count="14" type="stmt"/>
-        <line num="35" count="14" type="stmt"/>
-        <line num="48" count="4" type="stmt"/>
-        <line num="49" count="4" type="stmt"/>
+        <line num="24" count="16" type="stmt"/>
+        <line num="33" count="16" type="stmt"/>
+        <line num="35" count="16" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
         <line num="54" count="8" type="stmt"/>
       </file>
       <file name="registerController.js" path="E:\Hacktiv8\Phase 3\Final Project\FP-Backend-Branch\edufox-backend\controllers\registerController.js">
@@ -241,7 +241,7 @@
         <line num="1" count="8" type="stmt"/>
         <line num="3" count="12" type="stmt"/>
         <line num="5" count="8" type="stmt"/>
-        <line num="6" count="15" type="stmt"/>
+        <line num="6" count="17" type="stmt"/>
         <line num="8" count="8" type="stmt"/>
       </file>
       <file name="cloudinary.js" path="E:\Hacktiv8\Phase 3\Final Project\FP-Backend-Branch\edufox-backend\helpers\cloudinary.js">
@@ -255,9 +255,9 @@
         <line num="1" count="8" type="stmt"/>
         <line num="3" count="8" type="stmt"/>
         <line num="5" count="8" type="stmt"/>
-        <line num="6" count="15" type="stmt"/>
+        <line num="6" count="17" type="stmt"/>
         <line num="9" count="8" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
+        <line num="10" count="18" type="stmt"/>
         <line num="13" count="8" type="stmt"/>
       </file>
     </package>
@@ -268,39 +268,39 @@
         <line num="1" count="8" type="stmt"/>
         <line num="2" count="8" type="stmt"/>
         <line num="4" count="8" type="stmt"/>
-        <line num="5" count="17" type="stmt"/>
-        <line num="6" count="17" type="stmt"/>
-        <line num="7" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="19" type="stmt"/>
+        <line num="6" count="19" type="stmt"/>
+        <line num="7" count="19" type="cond" truecount="2" falsecount="0"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="11" count="16" type="stmt"/>
-        <line num="20" count="16" type="stmt"/>
-        <line num="23" count="16" type="stmt"/>
-        <line num="29" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="18" type="stmt"/>
+        <line num="20" count="18" type="stmt"/>
+        <line num="23" count="18" type="stmt"/>
+        <line num="29" count="18" type="cond" truecount="2" falsecount="0"/>
         <line num="30" count="3" type="stmt"/>
-        <line num="33" count="13" type="stmt"/>
-        <line num="42" count="13" type="stmt"/>
+        <line num="33" count="15" type="stmt"/>
+        <line num="42" count="15" type="stmt"/>
         <line num="45" count="4" type="stmt"/>
         <line num="49" count="8" type="stmt"/>
       </file>
       <file name="errorHandle.js" path="E:\Hacktiv8\Phase 3\Final Project\FP-Backend-Branch\edufox-backend\middleware\errorHandle.js">
         <metrics statements="18" coveredstatements="18" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
         <line num="1" count="8" type="stmt"/>
-        <line num="2" count="18" type="stmt"/>
-        <line num="3" count="18" type="stmt"/>
-        <line num="4" count="18" type="stmt"/>
-        <line num="6" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="17" type="stmt"/>
+        <line num="3" count="17" type="stmt"/>
+        <line num="4" count="17" type="stmt"/>
+        <line num="6" count="17" type="cond" truecount="2" falsecount="0"/>
         <line num="10" count="5" type="stmt"/>
         <line num="11" count="5" type="stmt"/>
-        <line num="14" count="18" type="cond" truecount="4" falsecount="0"/>
-        <line num="15" count="7" type="stmt"/>
-        <line num="18" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="17" type="cond" truecount="4" falsecount="0"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="18" count="17" type="cond" truecount="2" falsecount="0"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="22" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="17" type="cond" truecount="2" falsecount="0"/>
         <line num="23" count="2" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
-        <line num="27" count="18" type="cond" truecount="2" falsecount="0"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="31" count="18" type="stmt"/>
+        <line num="27" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="31" count="17" type="stmt"/>
         <line num="37" count="8" type="stmt"/>
       </file>
     </package>
