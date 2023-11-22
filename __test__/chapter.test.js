@@ -79,7 +79,9 @@ describe("GET /chapter/:chapterId", () => {
       email: "juan@gmail.com",
       password: "12345",
     };
+    console.log(loginInput, "<<<<");
     const resLogin = await request(app).post("/login").send(loginInput);
+    console.log(resLogin.body, "<<<<<", 84);
     expect(resLogin.status).toBe(200);
     let chapterId = 1;
     const res = await request(app)

@@ -91,7 +91,7 @@ describe("GET /enrollments", () => {
     const res = await request(app)
       .get("/enrollments")
       .set("access_token", resLogin.body.access_token);
-    expect(res.status).toBe(200);
+    expect(res.status).toBe(201);
     expect(res.body).toBeInstanceOf(Object);
     // console.log(res.body, "<<<<<");
     expect(res.body).toHaveProperty("data", expect.any(Object));

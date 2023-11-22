@@ -45,7 +45,7 @@ describe("POST /register", () => {
 
   it("User Email already been used", async () => {
     const payload = {
-      username: "test",
+      username: "test45",
       email: "test@mail.com",
       password: "12345",
       phoneNumber: "08123205468",

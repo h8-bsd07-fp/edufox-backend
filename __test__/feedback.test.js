@@ -5,43 +5,55 @@ const { hashPassword } = require("../helpers/bcrypt");
 const { queryInterface } = sequelize;
 
 beforeAll(async () => {
-  const userData = require("../data/user.json").map((user) => {
-    return {
-      // ...user,
-      email: user.email,
-      password: hashPassword(user.password),
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
-  });
-  await queryInterface.bulkInsert("Users", userData);
+  try {
+    const userData = require("../data/user.json").map((user) => {
+      return {
+        ...user,
+        //   username: user.username,
+        email: "feedback_" + user.email,
+        password: hashPassword(user.password),
+        //   isPremium: user.isPremium,
+        //   profilePicture: user.profilePicture,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        // // ...user,
+        // email: user.email,
+        // password: hashPassword(user.password),
+        // createdAt: new Date(),
+        // updatedAt: new Date(),
+      };
+    });
+    await queryInterface.bulkInsert("Users", userData);
 
-  const typeCategory = require("../data/category.json").map((category) => {
-    return {
-      ...category,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
-  });
-  await queryInterface.bulkInsert("Categories", typeCategory);
+    const typeCategory = require("../data/category.json").map((category) => {
+      return {
+        ...category,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      };
+    });
+    await queryInterface.bulkInsert("Categories", typeCategory);
 
-  const courseData = require("../data/course.json").map((course) => {
-    return {
-      ...course,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
-  });
-  await queryInterface.bulkInsert("Courses", courseData);
+    const courseData = require("../data/course.json").map((course) => {
+      return {
+        ...course,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      };
+    });
+    await queryInterface.bulkInsert("Courses", courseData);
 
-  const chapterData = require("../data/chapter.json").map((chapter) => {
-    return {
-      ...chapter,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
-  });
-  await queryInterface.bulkInsert("Chapters", chapterData);
+    const chapterData = require("../data/chapter.json").map((chapter) => {
+      return {
+        ...chapter,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      };
+    });
+    await queryInterface.bulkInsert("Chapters", chapterData);
+  } catch (err) {
+    console.log(err, "<<<< beforeAll feedback");
+  }
 });
 
 afterAll(async () => {
@@ -76,16 +88,43 @@ describe("POST /feedback/:courseId", () => {
   it("create feedback success", async () => {
     //login first
     const loginInput = {
-      email: "juan@gmail.com",
+      email: "feedback_juan@gmail.com",
       password: "12345",
     };
+    console.log(loginInput, "<<< feedback loginInput create feedback");
     const resLogin = await request(app).post("/login").send(loginInput);
+    console.log(resLogin, "<<< feedback login create feedback");
     expect(resLogin.status).toBe(200);
     let courseId = 1;
     const feedbackInput = {
       rating: 100,
       comment:
         "Penjelasan pada video sudah cukup jelas akan tetapi akan lebih baik bila lebih improve lagi.",
+    };
+    const res = await request(app)
+      .post("/feedback/" + courseId)
+      .send(feedbackInput)
+      .set("access_token", resLogin.body.access_token);
+    // console.log(res.body, "<<<<", 90);
+    expect(res.status).toBe(200);
+    expect(res.body).toBeInstanceOf(Object);
+    // console.log(res.body, "<<<<<");
+    expect(res.body).toHaveProperty("data", expect.any(Object));
+  });
+
+  it("update feedback success", async () => {
+    //login first
+    const loginInput = {
+      email: "feedback_juan@gmail.com",
+      password: "12345",
+    };
+    const resLogin = await request(app).post("/login").send(loginInput);
+    expect(resLogin.status).toBe(200);
+    let courseId = 1;
+    const feedbackInput = {
+      rating: 75,
+      comment:
+        "Penjelasan test pada video sudah cukup jelas akan tetapi akan lebih baik bila lebih improve lagi.",
     };
     const res = await request(app)
       .post("/feedback/" + courseId)
