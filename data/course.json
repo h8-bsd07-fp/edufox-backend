@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Luas dan Keliling Bangun Datar",
+    "CategoryId": 1,
+    "isPremium": true,
+    "imgUrl": "https://cdnwpedutorenews.gramedia.net/wp-content/uploads/2021/11/09135330/bangun-datar.jpg",
+    "description": "Menjelaskan cara menghitung luas dan keliling sebuah bangun datar"
+  },
+
+  {
+    "name": "Bilangan Pecahan",
+    "CategoryId": 1,
+    "isPremium": true,
+    "imgUrl": "https://media.istockphoto.com/id/1616073812/id/vektor/mata-pelajaran-pecahan-belajar-anak-kartun.jpg?s=170667a&w=0&k=20&c=2X2KDX_NavFtUNuOHT0weMqxn7AgeLfkTCbzLw7E1WU=",
+    "description": "mengenal dan mempelajari perhitungan suatu bilangan pecahan"
+  },
+
+  {
+    "name": "Tubuh",
+    "CategoryId": 2,
+    "isPremium": false,
+    "imgUrl": "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/1/21/58f40501-f9bc-430a-8d68-f2d8fb2921d1.jpg",
+    "description": "mempelajari mengenai tubuh"
+  },
+
+  {
+    "name": "Huruf & Angka",
+    "CategoryId": 3,
+    "isPremium": false,
+    "imgUrl": "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/1/21/58f40501-f9bc-430a-8d68-f2d8fb2921d1.jpg",
+    "description": "Mengenal berbagai huruf dan angka"
+  },
+
+  {
+    "name": "Perhitungan Bilangan Bulat",
+    "CategoryId": 1,
+    "isPremium": false,
+    "imgUrl": "https://sunenglish.co.id/wp-content/uploads/2021/06/artikel-18mei_10.jpg",
+    "description": "mempelajari berbagai hitungan bilangan bulat"
+  },
+
+  {
+    "name": "Berat benda",
+    "CategoryId": 1,
+    "isPremium": false,
+    "imgUrl": "https://png.pngtree.com/png-clipart/20200224/original/pngtree-kitchen-scales-icon-cartoon-style-png-image_5228316.jpg",
+    "description": "Pengenalan dan mempelajari perhitungan sebuah berat benda"
+  },
+
+  {
+    "name": "Menyusun paragraf",
+    "CategoryId": 3,
+    "isPremium": true,
+    "imgUrl": "https://imgv2-2-f.scribdassets.com/img/document/380801441/original/2b531dbd90/1695742211?v=1",
+    "description": "Mempelajari cara menyusun paragraf dengan kalimat yang efektif"
+  },
+
+  {
+    "name": "Desimal",
+    "CategoryId": 1,
+    "isPremium": true,
+    "imgUrl": "https://asset.kompas.com/crops/Ck_WMAmHC4ke28yoCckCfjOTeEA=/690x353:1240x719/750x500/data/photo/2023/06/08/6481caa125136.png",
+    "description": "Mempelaari mengenai bilangan desimal"
+  },
+
+  {
+    "name": "Luas dan Keliling Bangun 3 Dimensi",
+    "CategoryId": 1,
+    "isPremium": true,
+    "imgUrl": "https://asset-a.grid.id/crop/0x0:0x0/360x240/photo/2023/03/31/bangun-ruangjpg-20230331095251.jpg",
+    "description": "Menjelaskan cara menghitung luas dan keliling sebuah bangun 3 dimensi"
+  },
+
+  {
+    "name": "Hewan",
+    "CategoryId": 2,
+    "isPremium": false,
+    "imgUrl": "https://i.pinimg.com/originals/ed/f7/96/edf7963313c62ae35796eed89df14852.jpg",
+    "description": "Mempelajari mengenai hewan-hewanan"
+  },
+
+  {
+    "name": "Tumbuhan",
+    "CategoryId": 2,
+    "isPremium": false,
+    "imgUrl": "https://i.pinimg.com/originals/ed/f7/96/edf7963313c62ae35796eed89df14852.jpg",
+    "description": "Mempelajari mengenai tumbuhan"
+  }
+]

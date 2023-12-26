@@ -1,0 +1,18 @@
+[
+  {
+    "username": "Juan",
+    "email": "juan@gmail.com",
+    "password": "12345",
+    "isPremium": true,
+    "point": 0,
+    "profilePicture": "https://lh3.googleusercontent.com/a/ACg8ocLlLrRNDW2F17-XohfdMV77GmARmSGqee8LigloMuL1ecE=s360-c-no"
+  },
+  {
+    "username": "Khosy",
+    "email": "khosy@gmail.com",
+    "password": "12345",
+    "isPremium": false,
+    "point": 0,
+    "profilePicture": "https://lh3.googleusercontent.com/a/ACg8ocKQjy2vdcMUjngAU-LA7EU-1sirCeju3AqoDdo5CIXyYw=s432-c-no"
+  }
+]
